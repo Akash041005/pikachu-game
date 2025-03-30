@@ -121,4 +121,33 @@ html, body {
   justify-self: flex-end;
   color: white;
   font-family: geist;
+}
+
+#timu {
+  display: flex;
+  justify-self: flex-end;
+  color: white;
+  font-family: geist;
+}
+
+.model:active {
+  scale: 0.9;
+}
+
+.end {
+  justify-self: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.end h1 {
+  font-size: 10vw;
+  font-family: geist;
+  text-align: center;
+}
+.end h2 {
+  font-size: 1vw;
+  font-family: geist;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

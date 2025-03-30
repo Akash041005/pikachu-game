@@ -161,3 +161,41 @@ html,body{
     font-family: geist;
 
 }
+
+#timu{
+    display: flex;
+    justify-self: flex-end;
+    color: white;
+    font-family: geist;
+
+}
+
+
+.model:active{
+    scale: 0.90 ;
+}
+
+.end{
+    justify-self: center;
+    align-self: center;
+     align-content: center;
+     
+     text-align: center;
+     flex-direction: column;
+
+    h1{
+        font-size: 10vw;
+        font-family: geist;
+        text-align: center;
+    }
+
+
+    h2{
+        font-size: 1vw;
+        font-family: geist;
+        text-align: center;
+        
+    }
+
+
+}

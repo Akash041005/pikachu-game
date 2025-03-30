@@ -13,6 +13,9 @@ let medium= document.querySelector('#Medium')
 let hard= document.querySelector('#Hard')
 let model= document.querySelector('.model')
 let scoru= document.querySelector('#scoru')
+let timu= document.querySelector('#timu')
+let end= document.querySelector('.end')
+
 
 let img1 =document.createElement("img1")
 let img2 =document.createElement("img2")
@@ -30,6 +33,7 @@ img6.src = "pikachu-in-costume-png-25-w9r9lw2fx1o3cr4w.png";
 
 let score=0;
 let f=0
+let time=0
 
 let audio = new Audio();
 audio.src="./025-kanto-pikachu (1).mp3"
@@ -37,19 +41,25 @@ audio.src="./025-kanto-pikachu (1).mp3"
 let images=[img1,img2,img3,img4,img5,img6]
 
 hard.addEventListener(`click` ,() =>{
-    let f=600
-    starting.style.display=`none`
+    f=1000
+    starting.style.display = 'none';
 })
 medium.addEventListener(`click` ,() =>{
-    let f=800
-    starting.style.display=`none`
+    f=1200
+    starting.style.display=   'none';
 })
 easy.addEventListener(`click` ,() =>{
-    let f=1000
-    starting.style.display=`none`
+    f=1500
+    starting.style.display = 'none';
 })
 
 
+
+setInterval(function(){
+
+    time++
+    timu.innerHTML=`time: ${time}`
+},1000)
 
 
 function run (){
@@ -62,30 +72,41 @@ model.addEventListener(`click`,function(){
     // model.computedStyleMap.backgroundImage =`${images[a]}`
     
     
-    intervalId = setInterval(() => {
+  
+     setInterval(function () {
+        
+
+       
+            
         
         
         let l =Math.floor(Math.random()*85)
-        let m =Math.floor(Math.random()*85)
+        let m =Math.floor(Math.random()*80)
         console.log(l,m);
         
         model.style.position=`absolute`
         model.style.left=`${l}%`
         model.style.top=`${m}%`
-    }, f);
+            
+        
+
+    },f);
+
+    
+    // }, f);
+
     
     
-    if (intervalId) {
-        clearInterval(intervalId);
-      }
+    
 
 
    
      score ++ 
-     scoru.innerHTML= `Score : ${score}`
+     scoru.innerHTML= `Score : ${score} `
       
 
 
+     
 
 })
 }
@@ -97,6 +118,37 @@ hard.addEventListener(`click`,run);
 
 
 
+if (score>=100){
+
+    model.style.display = `none`
+    
+    end.style.height=`40%`
+    end.style.width=`60%`
+    end.style.backgroundColor =`yellowgreen`
+    end.style.display =`flex`
+
+
+    end.style.border =`5px`
+    end.style.borderRadius=`5px`
+
+
+    
+
+   
+    end.innerHTML=`<h1>GAME OVER </h1> <br> <h2>You Finished in : ${time} </h2>` 
+    // end.innerHTML=``
+
+
+
+
+
+
+    
+
+
+
+    
+}
 
 
 

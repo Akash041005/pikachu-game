@@ -15,21 +15,28 @@
                  <div class="starting">
                     <div class="board">
                     <h1>Select Difficulty</h1>
-                </div>
+                 </div>
                     <div class="buttons">
-                    <button id="Easy" type="button">Easy</button>
-                    <button id="Medium" type="button">Medium</button>
-                    <button id="Hard" type="button">Hard</button>
+                     <button id="Easy"  onclick="click.play();"  type="button">Easy</button>
+                     <button id="Medium" onclick="click.play();"  type="button">Medium</button>
+                     <button id="Hard"  onclick="click.play();" type="button">Hard</button>
                     </div>
 
                     </div>
 
 
-            <div class="playing">
+                <div class="playing">
                 <div class="model" onclick="audio.play();"></div>
-                <h1 id="scoru"></h1>
+                
+                <h1 id="scoru"></h1><br>
 
+                <h1 id="timu"></h1>
+                <div class="end"></div>
+                
             </div>
+    
+        </div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>     
