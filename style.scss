@@ -8,6 +8,7 @@ html,body{
     height: 100%;
     width: 100%;
     margin: 0;
+    overflow: hidden;
 
 }
 
@@ -20,7 +21,7 @@ html,body{
     .starting{
         height: 100%;
         width: 100%;
-        background-image:url(bg1.jpg);
+        background-image:url(./images/bg1.jpg);
         background-size: cover;
         display: flex;
         flex-direction:column ;
@@ -136,14 +137,14 @@ html,body{
     height: 100%;
     width: 100%;
     background-color: red;
-    background-image: url(main\ bg.jpg);
+    background-image: url(./images/main\ bg.jpg);
     background-size: cover;
 
     .model{
         height: 25%;
         aspect-ratio: 1/1;
         
-        background: url(pikachu-adventure-png-05032024-0lcddwjhg2f7ycf2.png);
+        background: url(./images/pikachu-adventure-png-05032024-0lcddwjhg2f7ycf2.png);
         background-size: cover;
 
        

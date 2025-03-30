@@ -24,12 +24,12 @@ let img4 =document.createElement("img4")
 let img5 =document.createElement("img5")
 let img6 =document.createElement("img6")
 
-img1.src = "pikachu-adventure-png-05032024-0lcddwjhg2f7ycf2.png";
-img2.src = "pikachu-angry-png-pbv-m1cs24lccs3l13s3.png";
-img3.src = "pikachu-christmas-png-44-2cijvkgupm98dtpp.png";
-img4.src = "pikachu-face-png-kfi-fxsy0kbf1itwtn1x.png";
-img5.src = "pikachu-with-scarf-png-fqb17-b1d9g3gwwr2aih9g.png";
-img6.src = "pikachu-in-costume-png-25-w9r9lw2fx1o3cr4w.png";
+img1.src = "./images/pikachu-adventure-png-05032024-0lcddwjhg2f7ycf2.png";
+img2.src = "./images/pikachu-angry-png-pbv-m1cs24lccs3l13s3.png";
+img3.src = "./images/pikachu-christmas-png-44-2cijvkgupm98dtpp.png";
+img4.src = "./images/pikachu-face-png-kfi-fxsy0kbf1itwtn1x.png";
+img5.src = "./images/pikachu-with-scarf-png-fqb17-b1d9g3gwwr2aih9g.png";
+img6.src = "./images/pikachu-in-costume-png-25-w9r9lw2fx1o3cr4w.png";
 
 let score=0;
 let f=0;
@@ -37,7 +37,7 @@ let time=0
 window.imageMoveInterval = null;
 
 let audio = new Audio();
-audio.src="./025-kanto-pikachu (1).mp3"
+audio.src="./music/025-kanto-pikachu (1).mp3"
 
 let images=[img1,img2,img3,img4,img5,img6]
 
