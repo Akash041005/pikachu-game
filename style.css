@@ -1,78 +1,8 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  overflow: hidden;
-}
-
-.main {
-  height: 100%;
-  width: 100%;
-}
-.main .starting {
-  height: 100%;
-  width: 100%;
-  background-image: url(./images/bg1.jpg);
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-.main .starting .board {
-  height: 20%;
-  width: 25%;
-  align-content: center;
-  justify-content: center;
-  display: flex;
-  justify-self: center;
-  align-self: center;
-  background-image: url(https://imgs.search.brave.com/8VDdlwiB_YR0VTQavEf78JlMFdzaZ9ruW6pVZeQtCYU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzM4LzAyLzIz/LzM2MF9GXzgzODAy/MjMwMl9NMEFrQThC/OWVUeDBwVW1wb2JM/T0s0N3lPcnF2ampO/bS5qcGc);
-  border-radius: 10%;
-  background-size: cover;
-  margin-top: -11%;
-  animation: move;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-.main .starting h1 {
-  align-self: center;
-  color: rgb(255, 255, 255);
-  border-radius: 10%;
-  font-size: 2.5rem;
-  font-family: geist;
-}
-.main .starting .buttons {
-  height: 50%;
-  width: 30%;
-  margin-top: 5%;
-  justify-self: center;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.main .starting .buttons button {
-  height: 20%;
-  border-radius: 10px;
-  margin-top: 10%;
-  background-color: blue;
-  color: white;
-  animation: swing;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-.main .starting .buttons button:hover {
-  background-color: rgb(91, 91, 184);
-}
-.main .starting .buttons button:active {
-  scale: 0.9;
+@font-face {
+  font-family: "Naluka";
+  src: url("./fonts/naluka.regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 @keyframes swing {
   0% {
@@ -102,21 +32,101 @@ html, body {
     transform: translateX(20%);
   }
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-.playing {
+html, body {
   height: 100%;
   width: 100%;
-  background-color: red;
-  background-image: url(./images/main\ bg.jpg);
-  background-size: cover;
-}
-.playing .model {
-  height: 25%;
-  aspect-ratio: 1/1;
-  background: url(./images/pikachu-adventure-png-05032024-0lcddwjhg2f7ycf2.png);
-  background-size: cover;
+  overflow: hidden;
 }
 
+@media (min-width: 600px) {
+  .main {
+    height: 100%;
+    width: 100%;
+  }
+  .main .starting {
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/bg1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .main .starting .board {
+    height: 20%;
+    width: 25%;
+    align-content: center;
+    font-family: "naluka";
+    justify-content: center;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    background-image: url(https://imgs.search.brave.com/8VDdlwiB_YR0VTQavEf78JlMFdzaZ9ruW6pVZeQtCYU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzM4LzAyLzIz/LzM2MF9GXzgzODAy/MjMwMl9NMEFrQThC/OWVUeDBwVW1wb2JM/T0s0N3lPcnF2ampO/bS5qcGc);
+    border-radius: 10%;
+    background-size: cover;
+    margin-top: -11%;
+    animation: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  .main .starting h1 {
+    align-self: center;
+    color: rgb(255, 255, 255);
+    font-family: "Naluka";
+    border-radius: 10%;
+    font-size: 3.5rem;
+    color: rgb(172, 227, 91);
+  }
+  .main .starting .buttons {
+    height: 50%;
+    width: 30%;
+    margin-top: 5%;
+    justify-self: center;
+    align-self: center;
+    font-family: "Naluka";
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main .starting .buttons button {
+    height: 20%;
+    border-radius: 10px;
+    margin-top: 10%;
+    background-image: url(./images/diff\ selec.jpg);
+    animation: swing;
+    animation-duration: 3s;
+    font-family: "Naluka";
+    font-size: 2.5rem;
+    animation-iteration-count: infinite;
+    color: black;
+  }
+  .main .starting .buttons button:hover {
+    background-color: rgb(91, 91, 184);
+  }
+  .main .starting .buttons button:active {
+    scale: 0.9;
+  }
+  .playing {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    background-image: url(./images/main\ bg.jpg);
+    background-size: cover;
+  }
+  .playing .model {
+    height: 25%;
+    aspect-ratio: 1/1;
+    background: url(./images/pikachu-adventure-png-05032024-0lcddwjhg2f7ycf2.png);
+    background-size: cover;
+  }
+}
 #scoru {
   display: flex;
   justify-self: flex-end;
@@ -152,3 +162,138 @@ html, body {
   font-family: geist;
   text-align: center;
 }
+
+#restart {
+  background-color: rgb(8, 160, 247);
+  text-decoration: none;
+  font-size: larger;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: geist;
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: 100%;
+    width: 100%;
+  }
+  .main .starting {
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/bg1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .main .starting .board {
+    height: 20%;
+    width: 85%;
+    align-content: center;
+    font-family: "naluka";
+    justify-content: center;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    background-image: url(https://imgs.search.brave.com/8VDdlwiB_YR0VTQavEf78JlMFdzaZ9ruW6pVZeQtCYU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA4LzM4LzAyLzIz/LzM2MF9GXzgzODAy/MjMwMl9NMEFrQThC/OWVUeDBwVW1wb2JM/T0s0N3lPcnF2ampO/bS5qcGc);
+    border-radius: 10%;
+    background-size: cover;
+    margin-top: -11%;
+    animation: move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  .main .starting h1 {
+    align-self: center;
+    color: rgb(255, 255, 255);
+    font-family: "Naluka";
+    border-radius: 10%;
+    font-size: 2.8rem;
+    color: rgb(172, 227, 91);
+  }
+  .main .starting .buttons {
+    height: 50%;
+    width: 30%;
+    margin-top: 5%;
+    justify-self: center;
+    align-self: center;
+    font-family: "Naluka";
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main .starting .buttons button {
+    height: 20%;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10%;
+    background-image: url(./images/diff\ selec.jpg);
+    animation: swing;
+    animation-duration: 3s;
+    font-family: "Naluka";
+    font-size: 2rem;
+    animation-iteration-count: infinite;
+    color: black;
+  }
+  .main .starting .buttons button:hover {
+    background-color: rgb(91, 91, 184);
+  }
+  .main .starting .buttons button:active {
+    scale: 0.9;
+  }
+  .playing {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    background-image: url(./images/main\ bg.jpg);
+    background-size: cover;
+  }
+  .playing .model {
+    height: 25%;
+    aspect-ratio: 1/1;
+    background: url(./images/pikachu-adventure-png-05032024-0lcddwjhg2f7ycf2.png);
+    background-size: cover;
+  }
+  #scoru {
+    display: flex;
+    justify-self: flex-end;
+    color: white;
+    font-family: geist;
+  }
+  #timu {
+    display: flex;
+    justify-self: flex-end;
+    color: white;
+    font-family: geist;
+  }
+  .model:active {
+    scale: 0.9;
+  }
+  .end {
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .end h1 {
+    font-size: 10vw;
+    font-family: geist;
+    text-align: center;
+  }
+  .end h2 {
+    font-size: 2.5vw;
+    font-family: geist;
+    text-align: center;
+  }
+  .end #restart {
+    background-color: rgb(8, 160, 247);
+    font-size: larger;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: geist;
+    color: red;
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=style.css.map */

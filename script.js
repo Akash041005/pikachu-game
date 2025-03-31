@@ -15,6 +15,8 @@ let model= document.querySelector('.model')
 let scoru= document.querySelector('#scoru')
 let timu= document.querySelector('#timu')
 let end= document.querySelector('.end')
+let restart= document.querySelector('#restart')
+// let endd= document.querySelector('.endd')
 
 
 let img1 =document.createElement("img1")
@@ -31,7 +33,7 @@ img4.src = "./images/pikachu-face-png-kfi-fxsy0kbf1itwtn1x.png";
 img5.src = "./images/pikachu-with-scarf-png-fqb17-b1d9g3gwwr2aih9g.png";
 img6.src = "./images/pikachu-in-costume-png-25-w9r9lw2fx1o3cr4w.png";
 
-let score=0;
+let score=99;
 let f=0;
 let time=0
 window.imageMoveInterval = null;
@@ -39,22 +41,30 @@ window.imageMoveInterval = null;
 let audio = new Audio();
 audio.src="./music/025-kanto-pikachu (1).mp3"
 
+let endm = new Audio();
+endm.src="./music/music/end.mp3"
+
+
 let images=[img1,img2,img3,img4,img5,img6]
 
 hard.addEventListener(`click` ,() =>{
     f=1000
     starting.style.display = 'none';
+    endm.play();
     run();
 })
 medium.addEventListener(`click` ,() =>{
     f=1200
     starting.style.display=   'none';
+    endm.play();
     run();
 })
 easy.addEventListener(`click` ,() =>{
     f=1500
     starting.style.display = 'none';
+    endm.play();
     run();
+
 })
 
 
@@ -93,7 +103,7 @@ model.addEventListener(`click`, function () {
 });
 
 function checkGameOver() {
-    if (score >= 100) {
+    if (score == 100) {
         clearInterval(window.imageMoveInterval);
         
         end.style.height=`40%`
@@ -101,10 +111,21 @@ function checkGameOver() {
         end.style.backgroundColor =`yellowgreen`
         end.style.display =`flex`
 
+
         end.style.border =`5px solid black`
         end.style.borderRadius=`5px`
 
         end.innerHTML=`<h1>GAME OVER </h1> <br> <h2>You Finished in : ${time} </h2>` 
+
+
+        restart.style.height=`2rem`
+        restart.style.width=`4.2rem`
+        restart.innerHTML=`Restart`
+        model.style.display=`none`
+        restart.style.display=`flex`
+        restart.style.justifySelf=`center`
+        restart.style.textDecoration=`none`
+
     }
 }
 }
