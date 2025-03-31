@@ -33,7 +33,7 @@ img4.src = "./images/pikachu-face-png-kfi-fxsy0kbf1itwtn1x.png";
 img5.src = "./images/pikachu-with-scarf-png-fqb17-b1d9g3gwwr2aih9g.png";
 img6.src = "./images/pikachu-in-costume-png-25-w9r9lw2fx1o3cr4w.png";
 
-let score=99;
+let score=0;
 let f=0;
 let time=0
 window.imageMoveInterval = null;
