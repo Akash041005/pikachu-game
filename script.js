@@ -17,6 +17,7 @@ let timu= document.querySelector('#timu')
 let end= document.querySelector('.end')
 let restart= document.querySelector('#restart')
 let btn= document.querySelector('.btn')
+
 // let endd= document.querySelector('.endd')
 
 
@@ -34,7 +35,7 @@ img4.src = "./images/pikachu-face-png-kfi-fxsy0kbf1itwtn1x.png";
 img5.src = "./images/pikachu-with-scarf-png-fqb17-b1d9g3gwwr2aih9g.png";
 img6.src = "./images/pikachu-in-costume-png-25-w9r9lw2fx1o3cr4w.png";
 
-let score=99;
+let score=0;
 let f=0;
 let time=0
 window.imageMoveInterval = null;
@@ -42,8 +43,12 @@ window.imageMoveInterval = null;
 let audio = new Audio();
 audio.src="./music/025-kanto-pikachu (1).mp3"
 
+
 let endm = new Audio();
 endm.src="./music/end.mp3"
+
+let clickm = new Audio();
+clickm.src="./music/sound-1_kL0t0Jp.mp3"
 
 
 let images=[img1,img2,img3,img4,img5,img6]
@@ -51,19 +56,19 @@ let images=[img1,img2,img3,img4,img5,img6]
 hard.addEventListener(`click` ,() =>{
     f=1000
     starting.style.display = 'none';
-    endm.play();
+    clickm.play();
     run();
 })
 medium.addEventListener(`click` ,() =>{
     f=1200
     starting.style.display=   'none';
-    endm.play();
+    clickm.play();
     run();
 })
 easy.addEventListener(`click` ,() =>{
     f=1500
     starting.style.display = 'none';
-    endm.play();
+    clickm.play();
     run();
 
 })
@@ -105,6 +110,8 @@ model.addEventListener(`click`, function () {
 
 function checkGameOver() {
     if (score == 100) {
+
+
         clearInterval(window.imageMoveInterval);
         model.style.display = `none`;
         endm.play();
@@ -125,6 +132,12 @@ function checkGameOver() {
         end.innerHTML=`<h1>GAME OVER </h1> <br> <h2>You Finished in : ${time}s </h2>`
         model.style.display='none'
         restart.style.display=`block`
+        endm.play();
+
+        btn.addEventListener(`click`,function () {
+            clickm.play()
+            
+        })
     }
 }
 }
