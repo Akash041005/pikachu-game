@@ -54,19 +54,19 @@ clickm.src="./music/sound-1_kL0t0Jp.mp3"
 let images=[img1,img2,img3,img4,img5,img6]
 
 hard.addEventListener(`click` ,() =>{
-    f=1000
+    f=600
     starting.style.display = 'none';
     clickm.play();
     run();
 })
 medium.addEventListener(`click` ,() =>{
-    f=1200
+    f=800
     starting.style.display=   'none';
     clickm.play();
     run();
 })
 easy.addEventListener(`click` ,() =>{
-    f=1500
+    f=1000
     starting.style.display = 'none';
     clickm.play();
     run();
