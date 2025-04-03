@@ -73,16 +73,11 @@ easy.addEventListener(`click` ,() =>{
 
 })
 
-
-
-setInterval(function(){
-
+function run (){
+    setInterval(function(){
     time++
     timu.innerHTML=`time: ${time}`
 },1000)
-
-
-function run (){
 model.style.backgroundImage = `url(${images[4].src})`;
 
 if (window.imageMoveInterval) {
